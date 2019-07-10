@@ -2,27 +2,168 @@
 	<div class="simpletext">
 	<h1>{{ section.settings.text-box-title }}</h1>
 	<h3>{{ section.settings.text-box-content }}</h3>
-	</div>
+     <img src="{{ 'logo.png' | asset_url}}" alt="Logo" class="cssclass1 cssclass2" id="logo">
+      <a href="{{ settings.banner_call_to_action }}">Get started</a>{{ section.settings.video_url }}
+ 	</div>
 </div>
 
 
 {% schema %}
 	{
-		"name": "Text Box",
+		"name": "text",
 		"settings": [
-			{
-				"id": "text-box-title",
-				"type": "text",
-				"label": "Heading",
-				"degault": "Title"
-			},
-			{
-				"id": "text-box-content",
-				"type": "richtext",
-				"label": "Add Custome Text Here",
-				"default": "<p>Add your text here</p>"
-			}
-		]
+		{
+			"id": "text-box-title",
+			"type": "text",
+			"label": "Heading",
+			"placeholder": "Heading"
+		},
+		{
+			"id": "text-box-content",
+			"type": "richtext",
+			"label": "Add custome text",
+			"default": "<p>Enter Your Text</p>"
+		},
+		{
+ 		 "type": "checkbox",
+  			"id": "favicon_enable",
+  			"label": "Use custom favicon",
+ 			 "info": "Learn more about [favicons](https://en.wikipedia.org/wiki/Favicon)"
+		},
+		{
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+
+
+{
+   "type":      "radio",
+   "id":        "sport",
+   "label":     "Text",
+   "options": [
+     { "value": "none", "label": "None" },
+     { "value": "cricket", "label": "Cricket" },
+	 { "value": "Hockey", "label": "Hockey"}
+   ],
+   "default":   "none",
+   "info":      "Text           [Crciket](https://www.cricket.com)"
+},
+{
+	"type" : "textarea",
+	"id" : "id",
+	"label" : "Textarea Example",
+	"default" : "I am text area",
+	"info" : "Here text area info"
+},
+
+
+{
+   "type": "select",
+   "id": "products_per_page",
+   "options": [
+      { "value": "8", "label": "8 Products"},
+      { "value": "12", "label": "12 Products"},
+      { "value": "16", "label": "16 Products"}
+   ],
+   "label": "Products per page"
+},
+{
+	"type" : "checkbox",
+	"id" : "ids",
+	"label": "cricket",
+	"default": true
+},
+{
+	"type" : "checkbox",
+	"id" : "idss",
+	"label": "cricket",
+	"default": false
+},
+
+
+{
+    "type":      "range",
+    "id":        "font_size",
+    "min":       12,
+    "max":        18,
+    "step":       1,
+    "unit":       "px",
+    "label":     "Font size",
+    "default":   16
+},
+{
+	"type": "color",
+	"id" : "color_id",
+	"label" : "Color Picker",
+	"default" : "#9b7272"
+},
+{
+	"type": "font_picker",
+	"id": "Heading_id",
+	"label": "Heading",
+	"default": "helvetica_n4"
+},
+{
+	"type": "collection",
+	"id": "feature_collectoion",
+	"label": "Feature Collection"
+},
+
+
+{
+   "type": "product",
+   "id": "feature_product",
+   "label": "Feature product"
+},
+{
+	"type": "blog",
+	"id": "blog_id",
+	"label": "Bloag"
+},
+
+
+{
+   "type": "link_list",
+   "id": "main_nav",
+   "label": "Main navigation"
+},
+{
+  "id": "banner_call_to_action",
+  "type": "url",
+  "label": "Banner button link"
+},
+{
+   "id": "video_url",
+   "type": "video_url",
+   "label": "Video URL",
+   "accept": ["youtube", "vimeo"],
+   "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+   "info": "Text",
+   "placeholder": "Text"
+},
+
+
+{
+   "type": "header",
+   "content": "Body Styles"
+},
+
+
+{
+   "type": "paragraph",
+   "content": "Thanks for buying my theme.  Please contact me at support@theme.com for support details."
+}
+
+
+
+
+
+
+
+
+
+	]
 	}
 {% endschema %}
 

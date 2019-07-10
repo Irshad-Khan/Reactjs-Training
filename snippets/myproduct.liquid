@@ -1,0 +1,7 @@
+{% capture products_list %}
+
+{% for product in collection.products %}
+  {{ product.title }}
+{% endfor %}
+
+{% endcapture %}
